@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $errors['firstname_error'] = "Firstname can't be blank!";
     }elseif (!is_string(trim($_POST['firstname']))){
         $errors['firstname_error'] = "Can only be Alpha characters A-Za-z!";
-    }elseif (count((explode(" ",$_POST['firstname']))) > 2) {
+    }elseif (count((explode(" ",trim($_POST['firstname'])))) > 2) {
         $errors['firstname_error'] = "Firstname can't be more than two names!";
     }else {
         $firstname = strtoupper($_POST['firstname']);
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
         $errors['lastname_error'] = "Lastname can't be blank!";
     }elseif (!is_string(trim($_POST['lastname']))){
         $errors['lastname_error'] = "Can only be Alpha characters A-Za-z!";
-    }elseif (count((explode(" ",$_POST['lastname']))) > 1) {
+    }elseif (count((explode(" ",trim($_POST['lastname'])))) > 1) {
         $errors['lastname_error'] = "Lastname can't be more than one name!";
     }else {
         $lastname = strtoupper($_POST['lastname']);
