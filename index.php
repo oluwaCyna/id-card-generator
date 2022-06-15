@@ -156,7 +156,7 @@
     <div class="container mx-auto my-5">
         <div style="display:<?php echo $display_form ?>">
             <h2 class="text-center my-5 bg-warning p-3">Get a Free ID Card generated with an Avatar image</h2>
-            <form class="row g-3 needs-validation" action="card.php" method="post" novalidate>
+            <form class="row g-3 needs-validation" action="index.php" method="post" novalidate>
                 <div class="col-md-6">
                     <label for="validationCustom01" class="form-label">First name</label>
                     <input type="text" class="form-control" id="validationCustom01" value="<?php echo $firstname ?>" name="firstname" required>
